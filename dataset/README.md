@@ -9,13 +9,29 @@
   - Owl: 672 images
 
 ## Data Source
-Images collected from [your source - e.g., web crawler, Kaggle, Google Images]
+Images were collected using a **custom web crawler** built with Python.
+
+### Web Crawler Tools Used:
+- `requests` library for downloading images
+- `BeautifulSoup` for parsing HTML
+- `PIL/Pillow` for image processing
+- `io.BytesIO` for handling image data
+
+### Collection Process:
+1. Searched for bird species images using web scraping
+2. Downloaded images from multiple online sources
+3. Filtered and validated images
+4. Removed duplicates and corrupted files
 
 ## Dataset Split
-- Training: 70% (~1,510 images)
-- Validation: 15% (~323 images)
-- Testing: 15% (~323 images)
+- Training: 70% (~1,485 images)
+- Validation: 15% (~318 images)
+- Testing: 15% (~319 images)
+
+## Data Preprocessing
+- Standardized all images to 224×224 pixels
+- Converted to RGB format
+- Applied data augmentation (rotation, zoom, flip) during training
 
 ## Note
-The full dataset is stored in Google Drive due to file size limits.
-Contact the team for access.
+The full dataset is stored in Google Drive due to file size limits. Contact the team for access.
