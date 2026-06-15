@@ -2,36 +2,69 @@
 
 ## Bird Species Classification Dataset
 
-- **Total images:** 1,235
-- **Classes:** 3
-  - Eagle: 600  images
+### Dataset Overview
+
+This dataset was created for a bird species classification project using deep learning and transfer learning. The dataset contains images of three bird species: Eagle, Flamingo, and Owl. The images were prepared and organized for image classification using transfer learning models.
+
+### Dataset Statistics
+
+- **Total Images:** 1,234
+
+- **Number of Classes:** 3
+  - Eagle: 599 images
   - Flamingo: 189 images
   - Owl: 446 images
 
-## Data Source
-Images were collected using a **custom web crawler** built with Python.
+### Dataset Split
 
-### Web Crawler Tools Used:
-- `requests` library for downloading images
-- `BeautifulSoup` for parsing HTML
-- `PIL/Pillow` for image processing
-- `io.BytesIO` for handling image data
+The dataset was divided into training, validation, and testing sets using a 70:15:15 ratio.
 
-### Collection Process:
-1. Searched for bird species images using web scraping
-2. Downloaded images from multiple online sources
-3. Filtered and validated images
-4. Removed duplicates and corrupted files
+- Training: 863 images (70%)
+- Validation: 185 images (15%)
+- Testing: 186 images (15%)
 
-## Dataset Split
-- Training: 70% (~863 images)
-- Validation: 15% (~185 images)
-- Testing: 15% (~186 images)
+### Data Collection
 
-## Data Preprocessing
-- Standardized all images to 224×224 pixels
-- Converted to RGB format
-- Applied data augmentation (rotation, zoom, flip) during training
+Images were collected from online bird image sources and organized into separate folders according to their species. Duplicate and corrupted images were removed to improve dataset quality and ensure better model performance.
 
-## Note
-The full dataset is stored in Google Drive due to file size limits.
+### Data Preprocessing
+
+Before training, the following preprocessing techniques were applied:
+
+- Resized all images to 224 × 224 pixels
+- Converted images to RGB format
+- Normalized pixel values using rescaling (1/255)
+- Applied data augmentation during training:
+  - Rotation
+  - Horizontal Flip
+  - Zoom
+  - Width Shift
+  - Height Shift
+
+### Training Configuration
+
+- Image Size: 224 × 224
+- Batch Size: 32
+- Epochs: 50
+- Number of Classes: 3
+
+### Models Used
+
+The following transfer learning models were trained and evaluated:
+
+- ResNet50
+- DenseNet121
+- MobileNetV3Large
+
+### Evaluation Metrics
+
+The models were evaluated using:
+
+- Accuracy
+- Mean Average Precision (mAP)
+- Confusion Matrix
+- Training Time
+
+### Note
+
+The dataset and trained model files are stored in Google Drive and are not included in this GitHub repository due to file size limitations.
