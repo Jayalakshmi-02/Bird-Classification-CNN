@@ -2,11 +2,11 @@
 
 ## Bird Species Classification Dataset
 
-- **Total images:** 2,122
+- **Total images:** 1,235
 - **Classes:** 3
-  - Eagle: 743 images
-  - Flamingo: 707 images
-  - Owl: 672 images
+  - Eagle: 600  images
+  - Flamingo: 189 images
+  - Owl: 446 images
 
 ## Data Source
 Images were collected using a **custom web crawler** built with Python.
