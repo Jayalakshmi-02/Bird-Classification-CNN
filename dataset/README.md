@@ -24,9 +24,9 @@ Images were collected using a **custom web crawler** built with Python.
 4. Removed duplicates and corrupted files
 
 ## Dataset Split
-- Training: 70% (~1,485 images)
-- Validation: 15% (~318 images)
-- Testing: 15% (~319 images)
+- Training: 70% (~863 images)
+- Validation: 15% (~185 images)
+- Testing: 15% (~186 images)
 
 ## Data Preprocessing
 - Standardized all images to 224×224 pixels
@@ -34,4 +34,4 @@ Images were collected using a **custom web crawler** built with Python.
 - Applied data augmentation (rotation, zoom, flip) during training
 
 ## Note
-The full dataset is stored in Google Drive due to file size limits. Contact the team for access.
+The full dataset is stored in Google Drive due to file size limits.
